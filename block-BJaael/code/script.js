@@ -1,17 +1,9 @@
-let colorNum = document.querySelector('.inline');
- 
-function numberChange() {
-  let num = [0,1,2,3,4,5,6,7,8,9];
+let parentBox = document.querySelector('.boxes');
 
-  let numForBox = 0;
-
-  for(let i=0; i<3; i++){
-    let randomNumber = Math.floor(Math.random() * 16);
-    numForBox = numForBox + num[randomNumber];
-  }
-
-  return numForBox;
+function getRandomNumber(max){
+  return Math.floor(Math.random() * max);
 }
+
 
 function changeColor() {
   let hexColor = ["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"];
@@ -19,18 +11,29 @@ function changeColor() {
   let color = "#";
 
   for(let i=0; i<6; i++){
-    let randomcolor = Math.floor(Math.random() * 16);
+    let randomcolor = getRandomNumber;
     color = color + hexColor[randomcolor];
   }
   return color;
 }
 
 
-function intext(){
-  let ra = numberChange();
-  let colors = changeColor();
-  colorNum.innerHTML = ra;
-  colorNum.style.background = colors;
+for(let i=0; i<500; i++){
+  let div = document.createElement("div");
+  div.classList.add("box");
+  let h3 = document.createElement("h3");
+  let randomno = getRandomNumber(500);
+  h3.innerText = randomno;
+
+  div.append(h3);
+  parentBox.append(div);
+}
+let allboxes = document.querySelectorAll('.box');
+
+function handlemouse() {
+  allboxes.forEach((box) =>{
+    box.style.backgroundcolor = changeColor();
+  });
 }
 
-colorNum.addEventListener('click', intext);
+parentBox.addEventListener("mousemove", handlemouse);

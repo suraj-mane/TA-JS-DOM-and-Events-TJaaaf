@@ -33,10 +33,14 @@ img {
   max-width: 100%;
   height: auto;
 }
-table {
-  border: 2px solid black;
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
 }
-.inline {
-  border: 5px solid black;
-  padding: 40px;
+.box {
+  border: 1px solid black;
+  padding: 30px;
+}
+h3 {
+  
 }
