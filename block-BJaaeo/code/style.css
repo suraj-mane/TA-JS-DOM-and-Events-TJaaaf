@@ -15,7 +15,7 @@
 .wrap {
   display: flex;
 }
-.numBtn {
+li {
   padding: 50px;
   border: 1px solid black;
   flex-wrap: wrap;
