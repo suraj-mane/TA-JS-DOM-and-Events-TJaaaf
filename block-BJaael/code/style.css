@@ -8,7 +8,7 @@ html {
 *:after {
   box-sizing: inherit;
 }
-
+  
 body,
 h1,
 h2,
@@ -32,4 +32,11 @@ ul {
 img {
   max-width: 100%;
   height: auto;
+}
+table {
+  border: 2px solid black;
+}
+.inline {
+  border: 5px solid black;
+  padding: 40px;
 }
