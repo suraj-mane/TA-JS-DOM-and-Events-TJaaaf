@@ -91,3 +91,11 @@ input[type='text'] {
 .terms {
   display: inline-block;
 }
+h1{
+  padding: 5px;
+  font-size: 50px;
+}
+h3{
+  padding: 20px;
+  font-size: 30px;
+}
