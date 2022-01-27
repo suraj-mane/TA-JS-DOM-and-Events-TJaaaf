@@ -1,0 +1,28 @@
+.main-box {
+  background-color: bisque;
+  width: 800px;
+  height: 800px;
+}
+.heading {
+  text-align: center;
+}
+.display-screen {
+  padding: 50px 150px;
+  margin: 0 100px;
+  border-radius: 20px;
+  background-color: white;
+}
+.wrap {
+  display: flex;
+}
+li {
+  padding: 50px;
+  border: 1px solid black;
+  flex-wrap: wrap;
+  margin: 10px;
+  list-style: none;
+  border-radius: 20%;
+  background-color: #710133;
+  color: white;
+  font-size: 20px;
+}

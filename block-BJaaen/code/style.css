@@ -1,0 +1,27 @@
+.container {
+  margin: 0 auto;
+  width: 600px;
+  padding: 0px 5px 5px 5px;
+  border: 2px solid;
+}
+h1 {
+  background-color: cornflowerblue;
+  color: white;
+  padding: 5px;
+}
+li {
+  list-style: none;
+  display: inline;
+  padding: 10px;
+}
+.fa {
+  display: flex;
+  font-size: 50px;
+  padding: 20px;
+}
+.result {
+  text-align: center;
+  padding: 10px;
+  font-size: 50px;
+  color: green;
+}
