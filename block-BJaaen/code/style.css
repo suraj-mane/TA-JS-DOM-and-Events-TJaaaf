@@ -1,0 +1,18 @@
+.main-box {
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 500px;
+  height: 500px;
+  margin: 200px 600px;
+}
+.heading {
+  text-align: center;
+  background-color: cornflowerblue;
+  padding: 40px;
+}
+.btn {
+  padding: 20px;
+  font-size: 35px;
+  margin-left: 10px;
+  border: none;
+}
