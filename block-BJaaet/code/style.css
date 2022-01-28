@@ -1,0 +1,35 @@
+body {
+  background-color: sandybrown;
+}
+.container {
+  width: 700px;
+  margin: 0 auto;
+}
+.small-container {
+  background-color: cornflowerblue;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+h1 {
+  font-size: 50px;
+}
+.input-box {
+  width: 550px;
+  padding: 20px;
+  font-size: 30px;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+.check-box {
+  margin: 30px;
+  text-align: left;
+}
+.list {
+  font-size: 30px;
+}
+.display {
+  margin: 20px;
+  font-size: 30px;
+}
