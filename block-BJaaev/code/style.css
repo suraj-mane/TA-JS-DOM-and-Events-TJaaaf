@@ -1,0 +1,46 @@
+li {
+  list-style: none;
+}
+body {
+  background-color: sandybrown;
+}
+.container {
+  width: 700px;
+  margin: 0 auto;
+}
+.small-container {
+  background-color: cornflowerblue;
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+h1 {
+  font-size: 50px;
+  text-align: center;
+}
+.input-box {
+  width: 550px;
+  padding: 20px;
+  font-size: 30px;
+  border-radius: 10px;
+  border: 2px solid black;
+  text-align: center;
+}
+.check-box {
+  margin: 10px 10px 10px 0 ;
+  text-align: left;
+}
+.list {
+  font-size: 30px;
+  padding: 10px;
+  color: aliceblue;
+}
+.display {
+  margin: 20px;
+  font-size: 30px;
+}
+button {
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 20px;
+}
