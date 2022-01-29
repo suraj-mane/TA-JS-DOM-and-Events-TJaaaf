@@ -1,3 +1,6 @@
+li {
+  list-style: none;
+}
 body {
   background-color: sandybrown;
 }
@@ -23,11 +26,13 @@ h1 {
   border: 2px solid black;
 }
 .check-box {
-  margin: 30px;
+  margin: 10px 10px 10px 0 ;
   text-align: left;
 }
 .list {
   font-size: 30px;
+  padding: 10px;
+  color: aliceblue;
 }
 .display {
   margin: 20px;
