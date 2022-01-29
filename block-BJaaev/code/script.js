@@ -4,48 +4,48 @@ let btnAll = document.querySelector(".all");
 let btnActive = document.querySelector(".active");
 let btncomplete = document.querySelector(".complete");
 
-allMovies = [];
+allTodos = [];
 
 input.addEventListener('keyup', (event) => {
-  if(event.keyCode === 13){
-    allMovies.push({
+  if(event.keyCode === 13 && event.target.value){
+    allTodos.push({
       name: event.target.value,
-      watched: false,
+      isDone: false,
     });
     event.target.value = "";
     createMovieUI();
   } 
-  localStorage.setItem("todos",JSON.stringify(allMovies));
+  localStorage.setItem("todos",JSON.stringify(allTodos));
 });
 
 function deleteMovie(event) {
     let id = event.target.dataset.id;
-    allMovies.splice(id, 1);
-    localStorage.setItem("todos",JSON.stringify(allMovies));
+    allTodos.splice(id, 1);
+    localStorage.setItem("todos",JSON.stringify(allTodos));
     createMovieUI();
 }
 
 function changeMovie(event) {
   let id = event.target.id;
-  allMovies[id].watched = !allMovies[id].watched;
-  localStorage.setItem("todos",JSON.stringify(allMovies));
+  allTodos[id].isDone = !allTodos[id].isDone;
+  localStorage.setItem("todos",JSON.stringify(allTodos));
 }
 
 
-function createMovieUI(){
+function createMovieUI(data = allTodos){
   movieRoot.innerText = "";
-  allMovies.forEach((movie, i) => {
+  data.forEach((todo, i) => {
     let li = document.createElement("li");
     let input = document.createElement("input");
     input.classList.add("check-box");
     input.type = "checkbox";
     input.id = i;
-    input.checked = movie.watched;
+    input.checked = todo.isDone;
     input.addEventListener('change', changeMovie);
     let label = document.createElement("label");
     label.for = "1";
     label.classList.add("list");
-    label.innerText = movie.name;
+    label.innerText = todo.name;
     let span = document.createElement("span");
     span.innerText = "X";
     span.setAttribute("data-id", i);
@@ -56,24 +56,23 @@ function createMovieUI(){
   });
 }
 
+
+
+
+btnAll.addEventListener('click', () => {
+  allTodos = allTodos.filter((todo) => !todo.isDone);
+  createMovieUI(allTodos);
+});
+
+
+btnActive.addEventListener('click', () => {
+  let allactive = allTodos.filter((todo) => !todo.isDone);
+  createMovieUI(allactive);
+});
+
+btncomplete.addEventListener('click',() => {
+  let allcomplete = allTodos.filter((todo) => todo.isDone == true);
+  createMovieUI(allcomplete);
+});
+
 createMovieUI();
-
-function displayAll() {
-  createMovieUI();
-}
-
-function displayActive(){
-  allMovies.filter((ele) => {
-    if(ele.watched == false){
-      createMovieUI();
-    }
-  })
-}
-
-function displayComplete() {
-  allMovies.filter(ele => ele);
-}
-
-btnAll.addEventListener('click', displayAll);
-btnActive.addEventListener('click',displayActive);
-btncomplete.addEventListener('click',displayComplete);
