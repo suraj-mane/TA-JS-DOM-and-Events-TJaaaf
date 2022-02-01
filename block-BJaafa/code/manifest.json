@@ -1,0 +1,12 @@
+{
+  "manifest_version": 2,
+  "name":"post",
+  "description":"Add a custom background to chrome",
+  "version": "1.0",
+  "content_scripts":[
+    {
+      "matches": ["https://www.google.co.in/"],
+      "css":["style.css"]
+    } 
+  ]
+}
