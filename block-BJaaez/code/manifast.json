@@ -1,0 +1,9 @@
+{
+  "name":"vs code",
+  "description": "VS code cheatsheet",
+  "version": "1.0.0",
+  "manifast_version":2,
+  "chrome_url_overrides":{
+    "newtab":"index.html"
+  }
+}
